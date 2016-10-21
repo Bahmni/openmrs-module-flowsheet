@@ -57,7 +57,7 @@ public class PatientMonitoringFlowsheetServiceImplIT extends BaseModuleContextSe
     @Before
     public void setUp() throws Exception {
         executeDataSet("patientProgramTestData.xml");
-        executeDataSet("flowsheetTestData.xml");
+        executeDataSet("src/test/resources/flowsheetTestData.xml");
         bahmniProgramWorkflowService = Context.getService(BahmniProgramWorkflowService.class);
         patientService = Context.getPatientService();
         administrationService = Context.getAdministrationService();

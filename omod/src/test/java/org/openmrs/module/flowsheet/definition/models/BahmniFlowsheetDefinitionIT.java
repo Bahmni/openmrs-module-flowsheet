@@ -62,7 +62,7 @@ public class BahmniFlowsheetDefinitionIT extends BaseModuleContextSensitiveTest 
     @Before
     public void setUp() throws Exception {
         executeDataSet("patientProgramTestData.xml");
-        executeDataSet("flowsheetTestData.xml");
+        executeDataSet("src/test/resources/flowsheetTestData.xml");
         conceptService = Context.getConceptService();
         programWorkflowService = Context.getProgramWorkflowService();
     }
