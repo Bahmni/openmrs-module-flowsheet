@@ -40,7 +40,7 @@ public class PatientMonitoringFlowsheetController extends BaseRestController {
 
     private static Logger logger = Logger.getLogger(PatientMonitoringFlowsheetController.class);
     private static final String PATIENT_MONITORING_CONFIG_LOCATION = "endtb.patientMonitoring.configLocation";
-    private static final String BAHMNI_PRIMARY_IDENTIFIER_TYPE = "bahmni.primaryIdentifierType";
+    private static final String EMR_PRIMARY_IDENTIFIER_TYPE = "bahmni.primaryIdentifierType";
 
     @Autowired
     private PatientMonitoringFlowsheetService patientMonitoringFlowsheetService;
@@ -78,7 +78,7 @@ public class PatientMonitoringFlowsheetController extends BaseRestController {
     @ResponseBody
     public FlowsheetAttribute retrieveFlowsheetAttributes(@RequestParam("patientProgramUuid") String patientProgramUuid) throws Exception {
 
-        PatientIdentifierType primaryIdentifierType = patientService.getPatientIdentifierTypeByUuid(administrationService.getGlobalProperty(BAHMNI_PRIMARY_IDENTIFIER_TYPE));
+        PatientIdentifierType primaryIdentifierType = patientService.getPatientIdentifierTypeByUuid(administrationService.getGlobalProperty(EMR_PRIMARY_IDENTIFIER_TYPE));
         OrderType orderType = orderService.getOrderTypeByUuid(OrderType.DRUG_ORDER_TYPE_UUID);
         BahmniPatientProgram bahmniPatientProgram = (BahmniPatientProgram) Context.getService(BahmniProgramWorkflowService.class).getPatientProgramByUuid(patientProgramUuid);
 
