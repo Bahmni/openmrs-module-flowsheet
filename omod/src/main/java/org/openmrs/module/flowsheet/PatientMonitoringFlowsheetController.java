@@ -1,7 +1,6 @@
 package org.openmrs.module.flowsheet;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.bahmni.module.bahmnicore.model.bahmniPatientProgram.BahmniPatientProgram;
 import org.bahmni.module.bahmnicore.service.BahmniProgramWorkflowService;
 import org.openmrs.Concept;
@@ -38,7 +37,6 @@ import static org.openmrs.module.flowsheet.constants.FlowsheetConstant.DRUG_DELA
 @Scope("prototype")
 public class PatientMonitoringFlowsheetController extends BaseRestController {
 
-    private static Logger logger = Logger.getLogger(PatientMonitoringFlowsheetController.class);
     private static final String PATIENT_MONITORING_CONFIG_LOCATION = "endtb.patientMonitoring.configLocation";
     private static final String EMR_PRIMARY_IDENTIFIER_TYPE = "emr.primaryIdentifierType";
 
