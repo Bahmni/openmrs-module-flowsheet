@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.openmrs.module</groupId>
         <artifactId>flowsheet</artifactId>
-        <version>${flowsheetVersion}</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <packaging>jar</packaging>
@@ -92,7 +92,7 @@
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>episodes-api</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <!-- End OpenMRS core -->
