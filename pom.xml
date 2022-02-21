@@ -12,7 +12,7 @@
 	<!--<url>https://wiki.openmrs.org/display/docs/Flowsheet+Module+Module+Module</url>-->
 
 	<properties>
-		<openMRSVersion>2.1.5</openMRSVersion>
+		<openMRSVersion>2.1.6</openMRSVersion>
 		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
 		<bahmniVersion>0.94-SNAPSHOT</bahmniVersion>
 		<flowsheetVersion>1.0-SNAPSHOT</flowsheetVersion>
@@ -21,6 +21,7 @@
 		<calculationModuleVersion>1.1</calculationModuleVersion>
 		<serializationXstreamModuleVersion>0.2.7</serializationXstreamModuleVersion>
 		<reportingModuleVersion>0.9.1</reportingModuleVersion>
+		<openMRSAtomfeedVersion>2.6.0</openMRSAtomfeedVersion>
 	</properties>
 
 	<organization>
