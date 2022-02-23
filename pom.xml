@@ -21,7 +21,7 @@
 		<calculationModuleVersion>1.1</calculationModuleVersion>
 		<serializationXstreamModuleVersion>0.2.7</serializationXstreamModuleVersion>
 		<reportingModuleVersion>0.9.1</reportingModuleVersion>
-		<openMRSAtomfeedVersion>2.6.0</openMRSAtomfeedVersion>
+		<openMRSAtomfeedVersion>2.6.1</openMRSAtomfeedVersion>
 	</properties>
 
 	<organization>
