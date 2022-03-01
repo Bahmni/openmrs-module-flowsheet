@@ -15,6 +15,7 @@
 		<openMRSVersion>2.1.6</openMRSVersion>
 		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
 		<bahmniVersion>0.94-SNAPSHOT</bahmniVersion>
+		<bahmniJavaUtilsVersion>0.94.2-SNAPSHOT</bahmniJavaUtilsVersion>
 		<flowsheetVersion>1.0-SNAPSHOT</flowsheetVersion>
 		<openMRSWebServicesVersion>2.14</openMRSWebServicesVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
