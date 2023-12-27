@@ -5,8 +5,8 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.time.DateUtils;
 import org.bahmni.module.bahmnicore.dao.ObsDao;
 import org.bahmni.module.bahmnicore.dao.OrderDao;
-import org.bahmni.module.bahmnicore.model.bahmniPatientProgram.BahmniPatientProgram;
-import org.bahmni.module.bahmnicore.model.bahmniPatientProgram.PatientProgramAttribute;
+import org.openmrs.PatientProgram;
+import org.openmrs.PatientProgramAttribute;
 import org.bahmni.module.bahmnicore.service.BahmniConceptService;
 import org.openmrs.Concept;
 import org.openmrs.Obs;
@@ -151,7 +151,7 @@ public class PatientMonitoringFlowsheetServiceImpl implements PatientMonitoringF
 
 
     @Override
-    public FlowsheetAttribute getFlowsheetAttributesForPatientProgram(BahmniPatientProgram bahmniPatientProgram, PatientIdentifierType primaryIdentifierType, OrderType orderType, Set<Concept> concepts) {
+    public FlowsheetAttribute getFlowsheetAttributesForPatientProgram(PatientProgram bahmniPatientProgram, PatientIdentifierType primaryIdentifierType, OrderType orderType, Set<Concept> concepts) {
         FlowsheetAttribute flowsheetAttribute = new FlowsheetAttribute();
         List<Obs> startDateConceptObs = obsDao.getObsByPatientProgramUuidAndConceptNames(bahmniPatientProgram.getUuid(), Arrays.asList(TI_TREATMENT_START_DATE), null, null, null, null);
         Date startDate = null;
@@ -211,7 +211,7 @@ public class PatientMonitoringFlowsheetServiceImpl implements PatientMonitoringF
         return null;
     }
 
-    private String getProgramAttribute(BahmniPatientProgram bahmniPatientProgram, String attribute) {
+    private String getProgramAttribute(PatientProgram bahmniPatientProgram, String attribute) {
         for (PatientProgramAttribute patientProgramAttribute : bahmniPatientProgram.getActiveAttributes()) {
             if (patientProgramAttribute.getAttributeType().getName().equals(attribute))
                 return patientProgramAttribute.getValueReference();
