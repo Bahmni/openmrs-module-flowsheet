@@ -45,14 +45,14 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>emrapi-api-1.12</artifactId>
-				<version>1.16</version>
+				<version>1.35.0-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>emrapi-api</artifactId>
-				<version>1.16</version>
+				<version>1.35.0-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 
