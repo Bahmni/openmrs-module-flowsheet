@@ -12,17 +12,17 @@
 	<!--<url>https://wiki.openmrs.org/display/docs/Flowsheet+Module+Module+Module</url>-->
 
 	<properties>
-		<openMRSVersion>2.1.6</openMRSVersion>
+		<openMRSVersion>2.5.7</openMRSVersion>
 		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
 		<bahmniVersion>0.94-SNAPSHOT</bahmniVersion>
-		<bahmniJavaUtilsVersion>0.94.2</bahmniJavaUtilsVersion>
+		<bahmniJavaUtilsVersion>0.94.4-SNAPSHOT</bahmniJavaUtilsVersion>
 		<flowsheetVersion>1.0-SNAPSHOT</flowsheetVersion>
-		<openMRSWebServicesVersion>2.14</openMRSWebServicesVersion>
+		<openMRSWebServicesVersion>2.29.0</openMRSWebServicesVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<calculationModuleVersion>1.1</calculationModuleVersion>
-		<serializationXstreamModuleVersion>0.2.7</serializationXstreamModuleVersion>
-		<reportingModuleVersion>0.9.1</reportingModuleVersion>
-		<openMRSAtomfeedVersion>2.6.1</openMRSAtomfeedVersion>
+		<calculationModuleVersion>1.3.0</calculationModuleVersion>
+		<serializationXstreamModuleVersion>0.2.15</serializationXstreamModuleVersion>
+		<reportingModuleVersion>1.23.0</reportingModuleVersion>
+		<openMRSAtomfeedVersion>2.6.2</openMRSAtomfeedVersion>
 	</properties>
 
 	<organization>
@@ -45,14 +45,14 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>emrapi-api-1.12</artifactId>
-				<version>1.16</version>
+				<version>1.35.0-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>emrapi-api</artifactId>
-				<version>1.16</version>
+				<version>1.35.0-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 

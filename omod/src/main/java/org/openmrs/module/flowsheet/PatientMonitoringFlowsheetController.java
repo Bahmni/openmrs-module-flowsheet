@@ -1,11 +1,11 @@
 package org.openmrs.module.flowsheet;
 
 import org.apache.commons.lang3.StringUtils;
-import org.bahmni.module.bahmnicore.model.bahmniPatientProgram.BahmniPatientProgram;
 import org.bahmni.module.bahmnicore.service.BahmniProgramWorkflowService;
 import org.openmrs.Concept;
 import org.openmrs.OrderType;
 import org.openmrs.PatientIdentifierType;
+import org.openmrs.PatientProgram;
 import org.openmrs.api.AdministrationService;
 import org.openmrs.api.ConceptService;
 import org.openmrs.api.OrderService;
@@ -63,7 +63,7 @@ public class PatientMonitoringFlowsheetController extends BaseRestController {
     public FlowsheetUI retrievePatientFlowSheet(@RequestParam("patientProgramUuid") String patientProgramUuid,
                                                 @RequestParam(value="startDate", required = false) String startDateStr,
                                                 @RequestParam(value="stopDate", required = false) String endDateStr) throws Exception {
-        BahmniPatientProgram bahmniPatientProgram = (BahmniPatientProgram) Context.getService(BahmniProgramWorkflowService.class).getPatientProgramByUuid(patientProgramUuid);
+        PatientProgram bahmniPatientProgram = Context.getService(BahmniProgramWorkflowService.class).getPatientProgramByUuid(patientProgramUuid);
 
 
         Date startDate = StringUtils.isNotEmpty(startDateStr) ? new SimpleDateFormat("yyyy-MM-dd").parse(startDateStr) : null;
@@ -78,7 +78,7 @@ public class PatientMonitoringFlowsheetController extends BaseRestController {
 
         PatientIdentifierType primaryIdentifierType = patientService.getPatientIdentifierTypeByUuid(administrationService.getGlobalProperty(EMR_PRIMARY_IDENTIFIER_TYPE));
         OrderType orderType = orderService.getOrderTypeByUuid(OrderType.DRUG_ORDER_TYPE_UUID);
-        BahmniPatientProgram bahmniPatientProgram = (BahmniPatientProgram) Context.getService(BahmniProgramWorkflowService.class).getPatientProgramByUuid(patientProgramUuid);
+        PatientProgram bahmniPatientProgram = Context.getService(BahmniProgramWorkflowService.class).getPatientProgramByUuid(patientProgramUuid);
 
         Set<Concept> conceptsForDrugs = new HashSet<>();
         conceptsForDrugs.add(conceptService.getConceptByName(DRUG_BDQ));

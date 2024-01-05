@@ -30,7 +30,6 @@ public class HandlerProviderTest {
 
     @Before
     public void setup() {
-        mockStatic(Context.class);
         initMocks(this);
         handlerProvider = new HandlerProvider();
     }

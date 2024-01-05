@@ -1,7 +1,6 @@
 package org.openmrs.module.flowsheet.service.impl;
 
 
-import org.bahmni.module.bahmnicore.model.bahmniPatientProgram.BahmniPatientProgram;
 import org.bahmni.module.bahmnicore.service.BahmniProgramWorkflowService;
 import org.junit.Before;
 import org.junit.Test;
@@ -67,7 +66,7 @@ public class PatientMonitoringFlowsheetServiceImplIT extends BaseModuleContextSe
 
     @Test
     public void shouldSetFlowsheetAttributes() {
-        BahmniPatientProgram bahmniPatientProgram = (BahmniPatientProgram) bahmniProgramWorkflowService.getPatientProgramByUuid("dfdfoifo-dkcd-475d-b939-6d82327f36a3");
+        PatientProgram bahmniPatientProgram = bahmniProgramWorkflowService.getPatientProgramByUuid("dfdfoifo-dkcd-475d-b939-6d82327f36a3");
         PatientIdentifierType patientIdentifierType = patientService.getPatientIdentifierTypeByUuid(administrationService.getGlobalProperty(BAHMNI_PRIMARY_IDENTIFIER_TYPE));
         OrderType orderType = orderService.getOrderTypeByUuid(OrderType.DRUG_ORDER_TYPE_UUID);
         Set<Concept> conceptsForDrugs = new HashSet<>();

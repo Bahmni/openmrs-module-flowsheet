@@ -5,6 +5,7 @@ import org.bahmni.module.bahmnicore.dao.impl.ObsDaoImpl;
 import org.bahmni.module.bahmnicore.service.BahmniDrugOrderService;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.openmrs.Concept;
@@ -83,7 +84,7 @@ public class QuestionEvaluatorFactoryTest {
         Patient patient = new Patient();
         patient.setUuid("patientUuid");
 
-        when(obsDao.getObsByPatientProgramUuidAndConceptNames(eq("patientProgramUuid"), anyListOf(String.class), anyInt(), any(ObsDaoImpl.OrderBy.class), any(Date.class), any(Date.class)))
+        when(obsDao.getObsByPatientProgramUuidAndConceptNames(eq("patientProgramUuid"), anyListOf(String.class), ArgumentMatchers.<Integer>any(), ArgumentMatchers.<ObsDaoImpl.OrderBy>any(), ArgumentMatchers.<Date>any(), ArgumentMatchers.<Date>any()))
                 .thenReturn(Arrays.asList(obs1, obs2));
         when(bahmniDrugOrderService.getDrugOrders("patientUuid", null, null, null, "patientProgramUuid")).thenReturn(Arrays.asList(bahmniDrugOrder));
         when(patientProgram.getUuid()).thenReturn("patientProgramUuid");
