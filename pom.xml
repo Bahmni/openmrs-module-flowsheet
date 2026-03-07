@@ -10,7 +10,12 @@
 	<name>Flowsheet Module Module</name>
 	<description>Helps to create flowsheet</description>
 	<!--<url>https://wiki.openmrs.org/display/docs/Flowsheet+Module+Module+Module</url>-->
-
+	<licenses>
+        <license>
+            <name>Mozilla Public License Version 2.0</name>
+            <url>https://www.bahmni.org/license/mplv2hd</url>
+        </license>
+    </licenses>
 	<properties>
 		<openMRSVersion>2.5.7</openMRSVersion>
 		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
